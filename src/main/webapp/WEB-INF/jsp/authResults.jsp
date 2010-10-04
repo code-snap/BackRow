@@ -16,7 +16,7 @@
 
             <p>If you would like to avoid generating another pin, use the following system properties when starting the server:</p>
 
-            <p style="font-family:courier serif">-Dtoken=<c:out value="${token}"/> -DtokenSecret=<c:out value="${tokenSecret}"/></p>
+            <p style="font-family:courier serif">-Dtoken=<c:out value="${accessToken.token}"/> -DtokenSecret=<c:out value="${accessToken.tokenSecret}"/></p>
 
             <p>Click here to get to your timeline.</p>
             

@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>auth</servlet-name>
-        <servlet-class>net.rallyedu.lab7.controller.AuthServlet</servlet-class>
+        <servlet-class>net.rallyedu.lab7.servlet.AuthServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>auth</servlet-name>
@@ -15,21 +15,21 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>view</servlet-name>
-        <servlet-class>net.rallyedu.lab7.ViewServlet</servlet-class>
+        <servlet-name>timeline</servlet-name>
+        <servlet-class>net.rallyedu.lab7.servlet.TimelineServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>view</servlet-name>
-        <url-pattern>/view</url-pattern>
+        <servlet-name>timeline</servlet-name>
+        <url-pattern>/timeline</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>add</servlet-name>
-        <servlet-class>net.rallyedu.lab7.AddServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>add</servlet-name>
-        <url-pattern>/add</url-pattern>
-    </servlet-mapping>
+    <filter>
+        <filter-name>twitter</filter-name>
+        <filter-class>net.rallyedu.lab7.filter.TwitterFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>twitter</filter-name>
+        <url-pattern>/timeline</url-pattern>
+    </filter-mapping>
 
 </web-app>
