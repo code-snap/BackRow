@@ -6,6 +6,15 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
     <servlet>
+        <servlet-name>auth</servlet-name>
+        <servlet-class>net.rallyedu.lab7.controller.AuthServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>auth</servlet-name>
+        <url-pattern>/auth</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>view</servlet-name>
         <servlet-class>net.rallyedu.lab7.ViewServlet</servlet-class>
     </servlet>

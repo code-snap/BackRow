@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.rallyedu</groupId>
     <artifactId>lab7</artifactId>
@@ -9,7 +9,14 @@
     <url>3308.rallyedu.net</url>
 
     <dependencies>
-        
+
+        <!-- compile -->
+        <dependency>
+            <groupId>org.twitter4j</groupId>
+            <artifactId>twitter4j-core</artifactId>
+            <version>2.1.5</version>
+        </dependency>
+
         <!-- provided -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -31,10 +38,9 @@
             <version>5.14</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
- 
-   <build>
+
+    <build>
         <finalName>lab7</finalName>
         <plugins>
             <plugin>
@@ -54,5 +60,13 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>twitter4j.org</id>
+            <name>twitter4j.org Repository</name>
+            <url>http://twitter4j.org/maven2</url>
+        </repository>
+    </repositories>
 
 </project>
