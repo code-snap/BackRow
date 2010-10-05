@@ -1,0 +1,39 @@
+body {
+    background:#00547d url(../images/bg.jpg) repeat-x 0 0;
+    color:#ccc;
+    font:14px 'Lucida Grande', sans-serif;
+}
+
+a {
+    color:#249eca;
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+#header {
+    margin-bottom:20px;
+}
+
+#container {
+    width:763px;
+    margin:auto;
+}
+
+#footer {
+    font-size:12px;
+    margin-top:20px;
+}
+
+.status {
+    margin:10px 0;
+    overflow:auto;
+}
+
+.status img {
+    border:1px solid #ccc;
+    float:left;
+    margin-right:10px;
+}
