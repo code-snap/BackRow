@@ -9,6 +9,6 @@
 
         <p style="font-family:courier serif">-Dtoken=<c:out value="${accessToken.token}"/> -DtokenSecret=<c:out value="${accessToken.tokenSecret}"/></p>
 
-        <p>Click <a href="<c:url value="/timeline">here</c:url> to get to your timeline.</p>
+        <p>Click <a href="<c:url value="/timeline"/>">here</a> to get to your timeline.</p>
     </jsp:attribute>
 </layout:default>
