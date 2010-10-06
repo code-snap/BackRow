@@ -2,8 +2,6 @@ package net.rallyedu.lab7.servlet;
 
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
-import twitter4j.TwitterFactory;
-import twitter4j.http.AccessToken;
 import twitter4j.http.RequestToken;
 
 import javax.servlet.ServletException;
@@ -31,8 +29,7 @@ public class AuthServlet extends HttpServlet {
             req.getSession().setAttribute(REQUEST_TOKEN_ATTRIBUTE, requestToken);
             req.setAttribute(AUTH_URL_ATTRIBUTE, requestToken.getAuthorizationURL());
             req.getRequestDispatcher(AUTH_FORM_VIEW).forward(req, resp);
-        }
-        catch(TwitterException e) {
+        } catch (TwitterException e) {
             resp.sendError(e.getStatusCode(), e.getMessage());
         }
     }
@@ -42,12 +39,11 @@ public class AuthServlet extends HttpServlet {
         Twitter twitter = newTwitter();
         try {
             HttpSession session = req.getSession();
-            RequestToken requestToken = (RequestToken)session.getAttribute(REQUEST_TOKEN_ATTRIBUTE);
+            RequestToken requestToken = (RequestToken) session.getAttribute(REQUEST_TOKEN_ATTRIBUTE);
             session.removeAttribute(REQUEST_TOKEN_ATTRIBUTE);
             setAccessToken(session, twitter.getOAuthAccessToken(requestToken, req.getParameter(PIN_PARAM)));
             req.getRequestDispatcher(AUTH_RESULTS_VIEW).forward(req, resp);
-        }
-        catch(TwitterException e) {
+        } catch (TwitterException e) {
             resp.sendError(e.getStatusCode(), e.getMessage());
         }
     }

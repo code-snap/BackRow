@@ -34,17 +34,19 @@ public class TwitterFilter implements Filter {
             IOException,
             ServletException
     {
-        HttpSession session = ((HttpServletRequest) request).getSession();
+        HttpServletRequest req = (HttpServletRequest) request;
+        HttpServletResponse resp = (HttpServletResponse) response;
+        HttpSession session = req.getSession();
         AccessToken accessToken = getAccessToken(session);
         if (accessToken == null) {
             accessToken = getSystemPropertyBasedAccessToken();
         }
         Twitter twitter = newTwitter(accessToken);
         if (verifyCredentials(twitter)) {
-            setTwitter((HttpServletRequest) request, twitter);
+            setTwitter(req, twitter);
             chain.doFilter(request, response);
         } else {
-            ((HttpServletResponse) response).sendRedirect(AUTH_URI);
+            resp.sendRedirect(AUTH_URI);
         }
     }
 

@@ -23,6 +23,15 @@
         <url-pattern>/timeline</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>tweet</servlet-name>
+        <servlet-class>net.rallyedu.lab7.servlet.TweetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>tweet</servlet-name>
+        <url-pattern>/tweet</url-pattern>
+    </servlet-mapping>
+
     <filter>
         <filter-name>twitter</filter-name>
         <filter-class>net.rallyedu.lab7.filter.TwitterFilter</filter-class>
@@ -30,6 +39,10 @@
     <filter-mapping>
         <filter-name>twitter</filter-name>
         <url-pattern>/timeline</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>twitter</filter-name>
+        <url-pattern>/tweet</url-pattern>
     </filter-mapping>
 
 </web-app>

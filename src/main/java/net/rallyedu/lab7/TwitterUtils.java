@@ -7,8 +7,6 @@ import twitter4j.http.AccessToken;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import static java.lang.System.getProperty;
-
 public class TwitterUtils {
     private static final String CONSUMER_KEY = "GDpdLtJsTJmpx3Ng45lkA";
     private static final String CONSUMER_SECRET = "TYg5i09b4Nok9IoctRCFGQl987s9RELluKQneYHD0U";
@@ -22,7 +20,7 @@ public class TwitterUtils {
     public static final Twitter newTwitter(AccessToken accessToken) {
         return new TwitterFactory().getOAuthAuthorizedInstance(CONSUMER_KEY, CONSUMER_SECRET, accessToken);
     }
-        
+
     public static final AccessToken getAccessToken(HttpSession session) {
         return (AccessToken) session.getAttribute(ACCESS_TOKEN_ATTRIBUTE);
     }
