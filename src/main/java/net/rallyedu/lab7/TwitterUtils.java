@@ -13,27 +13,27 @@ public class TwitterUtils {
     public static final String ACCESS_TOKEN_ATTRIBUTE = "accessToken";
     public static final String TWITTER_ATTRIBUTE = "twitter";
 
-    public static final Twitter newTwitter() {
+    public static Twitter newTwitter() {
         return new TwitterFactory().getOAuthAuthorizedInstance(CONSUMER_KEY, CONSUMER_SECRET);
     }
 
-    public static final Twitter newTwitter(AccessToken accessToken) {
+    public static Twitter newTwitter(AccessToken accessToken) {
         return new TwitterFactory().getOAuthAuthorizedInstance(CONSUMER_KEY, CONSUMER_SECRET, accessToken);
     }
 
-    public static final AccessToken getAccessToken(HttpSession session) {
+    public static AccessToken getAccessToken(HttpSession session) {
         return (AccessToken) session.getAttribute(ACCESS_TOKEN_ATTRIBUTE);
     }
 
-    public static final void setAccessToken(HttpSession session, AccessToken accessToken) {
+    public static void setAccessToken(HttpSession session, AccessToken accessToken) {
         session.setAttribute(ACCESS_TOKEN_ATTRIBUTE, accessToken);
     }
 
-    public static final Twitter getTwitter(HttpServletRequest request) {
+    public static Twitter getTwitter(HttpServletRequest request) {
         return (Twitter) request.getAttribute(TWITTER_ATTRIBUTE);
     }
 
-    public static final void setTwitter(HttpServletRequest request, Twitter twitter) {
+    public static void setTwitter(HttpServletRequest request, Twitter twitter) {
         request.setAttribute(TWITTER_ATTRIBUTE, twitter);
     }
 }
