@@ -32,6 +32,15 @@
         <url-pattern>/tweet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>friends</servlet-name>
+        <servlet-class>net.rallyedu.lab7.servlet.FriendsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>friends</servlet-name>
+        <url-pattern>/friends</url-pattern>
+    </servlet-mapping>
+
     <filter>
         <filter-name>twitter</filter-name>
         <filter-class>net.rallyedu.lab7.filter.TwitterFilter</filter-class>
@@ -43,6 +52,10 @@
     <filter-mapping>
         <filter-name>twitter</filter-name>
         <url-pattern>/tweet</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>twitter</filter-name>
+        <url-pattern>/friends</url-pattern>
     </filter-mapping>
 
 </web-app>
