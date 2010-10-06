@@ -22,6 +22,10 @@ a:hover {
     margin:auto;
 }
 
+#content {
+    overflow:auto;
+}
+
 #footer {
     font-size:12px;
     margin-top:20px;
@@ -46,6 +50,11 @@ a:hover {
     margin-top:10px;
 }
 
+.command {
+    font-family:courier, monospace;
+    font-size:10px;
+}
+
 .status {
     margin:10px 0;
     overflow:auto;
@@ -56,3 +65,4 @@ a:hover {
     float:left;
     margin-right:10px;
 }
+
