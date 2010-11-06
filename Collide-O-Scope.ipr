@@ -38,9 +38,6 @@
           <element id="directory" name="classes">
             <element id="module-output" name="Collide-O-Scope" />
           </element>
-          <element id="directory" name="lib">
-            <element id="library" level="project" name="Maven: org.twitter4j:twitter4j-core:2.1.5" />
-          </element>
         </element>
       </root>
     </artifact>
@@ -243,21 +240,10 @@
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="" />
+    <mapping directory="" vcs="Git" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
   <component name="libraryTable">
-    <library name="Maven: org.twitter4j:twitter4j-core:2.1.5">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/twitter4j/twitter4j-core/2.1.5/twitter4j-core-2.1.5.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/twitter4j/twitter4j-core/2.1.5/twitter4j-core-2.1.5-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/twitter4j/twitter4j-core/2.1.5/twitter4j-core-2.1.5-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: javax.servlet:servlet-api:2.5">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar!/" />
