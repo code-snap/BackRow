@@ -1,66 +1,157 @@
+<html>
 <title>Team Backrow</title>
-<h1><font color="#FFFFFF">Have fun and look at colors and stuff</font></h1>
-<P><font color="#FFFFFF">This is a website where you can have fun watching colors and listening to music.</font></P>
-<body background="http://www.szsza.info/wp-content/uploads/2010/03/abstract-vortext-swirly-flower-light-lines-photoshop-effect.jpg"/>
+
+<text id="CircleX">X</text>
+<text id="CircleY">X</text>
+<text id="MouseX">X</text>
+<text id="MouseY">X</text>
+<text id="Distance">X</text>
+
+
+
 <div>
-        <canvas id="canvas" width="400" height="300">
-         This text is displayed if your browser
-         does not support HTML5 Canvas.
-        </canvas>
-    </div>
+    <canvas id="canvas" width="100" height="100">
+        This text is displayed if your browser
+        does not support HTML5 Canvas.
+    </canvas>
+</div>
 
 
-    <script type="text/javascript">
-    var canvas;
-    var ctx;
-    var x = 400;
-    var y = 300;
-    var dx = 2;
-    var dy = 4;
-    var WIDTH = 400;
-    var HEIGHT = 300;
+<script type="text/javascript">
 
-    function circle(x,y,r) {
-      ctx.beginPath();
-      ctx.arc(x, y, r, 0, Math.PI*2, true);
-      ctx.fill();
+    var viewPortWidth;
+    var viewPortHeight;
+
+    // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+
+    if (typeof window.innerWidth != 'undefined') {
+        viewPortWidth = window.innerWidth,
+                viewPortHeight = window.innerHeight
     }
 
-    function rect(x,y,w,h) {
-      ctx.beginPath();
-      ctx.rect(x,y,w,h);
-      ctx.closePath();
-      ctx.fill();
+    // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+
+    else if (typeof document.documentElement != 'undefined'
+            && typeof document.documentElement.clientWidth !=
+            'undefined' && document.documentElement.clientWidth != 0) {
+        viewPortWidth = document.documentElement.clientWidth,
+                viewPortHeight = document.documentElement.clientHeight
+    }
+
+    // older versions of IE
+
+    else {
+        viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+                viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+    }
+
+    var canvas = document.getElementById("canvas");
+    var ctx;
+    var x = 2;
+    var y = 4;
+    var distance = 0;
+    var dx = 2;
+    var dy = 4;
+    var WIDTH = viewPortWidth;
+    var HEIGHT = viewPortHeight;
+    var mouseX = 0;
+    var mouseY = 0;
+    var CircleXText
+    var CircleYText;
+   var MouseXText ;
+    var MouseYText;
+    var DistanceText;
+    var red = 50; var green=100; var blue= 150;
+
+    function circle(x, y, r) {
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2, true);
+        ctx.fill();
+    }
+
+    function rect(x, y, w, h) {
+        ctx.beginPath();
+        ctx.rect(x, y, w, h);
+        ctx.closePath();
+        ctx.fill();
     }
 
 
     function clear() {
-      ctx.clearRect(0, 0, WIDTH, HEIGHT);
+        ctx.clearRect(0, 0, WIDTH, HEIGHT);
     }
 
     function init() {
-      canvas = document.getElementById("canvas");
-      ctx = canvas.getContext("2d");
-      return setInterval(draw, 10);
+        ctx = canvas.getContext("2d");
+        canvas.setAttribute("width", viewPortWidth.toString());
+        canvas.setAttribute("height", viewPortHeight.toString());
+        CircleXText = document.getElementById("CircleX");
+        CircleYText = document.getElementById("CircleY");
+        MouseXText = document.getElementById("MouseX");
+        MouseYText = document.getElementById("MouseY");
+        DistanceText = document.getElementById("Distance");
+        document.onmousemove = getMouseXY;
+        return setInterval(draw, 10);
     }
 
+    function getMouseXY(e) {
 
+            if (!e) var e = window.event;
+            if (e.pageX || e.pageY) 	{
+                mouseX = e.pageX;
+                mouseY = e.pageY;
+            }
+            else if (e.clientX || e.clientY) 	{
+                mouseX = e.clientX + document.body.scrollLeft
+                    + document.documentElement.scrollLeft;
+                mouseY = e.clientY + document.body.scrollTop
+                    + document.documentElement.scrollTop;
+            }
+            // posx and posy contain the mouse position relative to the document
+            // Do something with this information
+   
+    }
     function draw() {
-      clear();
-      //ctx.fillStyle = "#FAF7F8";
-      //rect(0,0,WIDTH,HEIGHT);
-      ctx.fillStyle = "#ff00ff";
-      circle(x, y, 10);
+        clear();
+        //ctx.fillStyle = "#FAF7F8";
+        //rect(0,0,WIDTH,HEIGHT);
 
-      if (x + dx > WIDTH || x + dx < 0)
-        dx = -dx;
-      if (y + dy > HEIGHT || y + dy < 0)
-        dy = -dy;
+        CircleXText.firstChild.nodeValue = "Circle X: " + x.toString();
+        CircleYText.firstChild.nodeValue = "Circle Y : " + y.toString();
+        MouseXText.firstChild.nodeValue = "Mouse X: " + mouseX.toString();
+        MouseYText.firstChild.nodeValue = "Mouse Y: " + mouseY.toString();
+         DistanceText.firstChild.nodeValue = "Distance: " + distance.toString();
+        red += 1;
+        green += 1;
+        blue += 1;
+        if(red >200)
+        {
+            red = 0;
+        }
+        if(blue > 200)
+        {
+            blue = 0;
+        }
+        if(green > 200)
+        {
+            green = 0;
+        }
+        ctx.fillStyle="rgb(" + red.toString() + "," + green.toString() + "," + blue.toString() +")";
+        
 
-      x += dx;
-      y += dy;
+        circle(x, y, 10);
+        circle(mouseX,mouseY,20)
+
+        distance =  Math.sqrt(Math.pow((mouseX - x),2)  + Math.pow((mouseY - y),2) );
+        if (x + dx > WIDTH || x + dx < 0 || distance < 30)
+            dx = -dx;
+        if (y + dy > HEIGHT || y + dy < 0)
+            dy = -dy;
+
+        x += dx;
+        y += dy;
     }
 
     init();
-    </script>
-
+</script>
+</html>
