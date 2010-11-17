@@ -79,6 +79,9 @@
       </facet-type>
     </autodetection-disabled>
   </component>
+  <component name="HudsonMonitorComponent">
+    <option name="timeOutTextField" value="30" />
+  </component>
   <component name="IdProvider" IDEtalkID="4B13311BAC8EE63326E8DA41C51A7D6D" />
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-target 1.6" />
