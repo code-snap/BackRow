@@ -10,12 +10,6 @@
 </head>
 <body>
 
-<text id="CircleX">X</text>
-<text id="CircleY">X</text>
-<text id="MouseX">X</text>
-<text id="MouseY">X</text>
-<text id="Distance">X</text>
-
 <div>
     <canvas id="canvas" width="100" height="100">
         This text is displayed if your browser

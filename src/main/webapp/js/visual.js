@@ -42,11 +42,44 @@ var viewPortHeight;
     var MouseYText;
     var DistanceText;
     var red = 50; var green=100; var blue= 150;
+    var circles = new Array();
+    var oldMouseX;
+    var oldMouseY;
+
+    function Circle(x, y, r){
+        this.xHome = x;
+        this.yHome = y;
+        this.originalRadius = r;
+        this.x = x;
+        this.y = y;
+        this.r = r;
+    }
+
+    function  createObjects(){
+        var j = WIDTH/10;
+        var k = 25;
+        var l = 5;
+        for(var i = 0; k < HEIGHT; i++)
+        {
+            circles[i] = new Circle(j,k,l);
+            if(j == WIDTH)
+            {
+                j = 0;
+                k = k + 40;
+                l = 5;
+            }
+            j = j + WIDTH/10;
+            l++;
+        }
+    }
 
     function circle(x, y, r) {
         ctx.beginPath();
         ctx.arc(x, y, r, 0, Math.PI * 2, true);
         ctx.fill();
+        this.xHome = x;
+        this.yHome = y;
+        this.originalRadius = r;
     }
 
     function rect(x, y, w, h) {
@@ -96,14 +129,14 @@ var viewPortHeight;
         //ctx.fillStyle = "#FAF7F8";
         //rect(0,0,WIDTH,HEIGHT);
 
-        CircleXText.firstChild.nodeValue = "Circle X: " + x.toString();
-        CircleYText.firstChild.nodeValue = "Circle Y : " + y.toString();
-        MouseXText.firstChild.nodeValue = "Mouse X: " + mouseX.toString();
-        MouseYText.firstChild.nodeValue = "Mouse Y: " + mouseY.toString();
-         DistanceText.firstChild.nodeValue = "Distance: " + distance.toString();
-        red += 1;
-        green += 1;
+        if(mouseX != oldMouseX || mouseY != oldMouseY)
+        {
+                    red += 7;
+        green += 9;
         blue += 1;
+        }
+        oldMouseX = mouseX;
+        oldMouseY = mouseY;
         if(red >200)
         {
             red = 0;
@@ -118,20 +151,16 @@ var viewPortHeight;
         }
         ctx.fillStyle="rgb(" + red.toString() + "," + green.toString() + "," + blue.toString() +")";
 
+        for (var i = 0; i < circles.length; i++){
+        circle(circles[i].x,circles[i].y,circles[i].r);
+         }
 
-        circle(x, y, 10);
         circle(mouseX,mouseY,20)
 
         distance =  Math.sqrt(Math.pow((mouseX - x),2)  + Math.pow((mouseY - y),2) );
-        if (x + dx > WIDTH || x + dx < 0 || distance < 30)
-            dx = -dx;
-        if (y + dy > HEIGHT || y + dy < 0)
-            dy = -dy;
-
-        x += dx;
-        y += dy;
     }
 
+    createObjects();
     init();
 }
 window.onload = main;
