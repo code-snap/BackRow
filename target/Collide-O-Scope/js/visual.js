@@ -120,9 +120,9 @@ var viewPortHeight;
         //ctx.fillStyle = "#FAF7F8";
         //rect(0,0,WIDTH,HEIGHT);
 
-        DGlib.clearRect(0,0,'100%','100%');
+        //DGlib.clearRect(0,0,'100%','100%');
         CollideOScopeBackground();
-       // DGlib.drawCircle([mouseX, mouseY],10,['rgb(0,0,0)','rgb('+ red.toString() + ',' + green.toString() + ',' + blue.toString() +')'],1,'both');
+        DGlib.drawCircle([mouseX, mouseY],10,['rgb(0,0,0)','rgb('+ red.toString() + ',' + green.toString() + ',' + blue.toString() +')'],1,'both');
         if(mouseX != oldMouseX || mouseY != oldMouseY)
         {
                     red += 7;

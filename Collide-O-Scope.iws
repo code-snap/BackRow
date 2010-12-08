@@ -21,13 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b0ac5d87-74c4-429e-aaf5-a46edd2c504c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Collide-O-Scope.iws" afterPath="$PROJECT_DIR$/Collide-O-Scope.iws" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/your_touch.ogg" afterPath="$PROJECT_DIR$/src/main/webapp/music/your_touch.ogg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/jittr.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/visual.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/visual.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/images/bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/images/jittr.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/your_touch.mp3" afterPath="$PROJECT_DIR$/src/main/webapp/music/your_touch.mp3" />
     </list>
     <ignored path="$USER_HOME_GRIFFON$/" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -39,8 +34,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="Commander">
-    <leftPanel url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
-    <rightPanel url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
+    <leftPanel />
+    <rightPanel />
     <splitter proportion="0.5" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -92,10 +87,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="29" selection-start="786" selection-end="786" vertical-scroll-proportion="-14.636364">
+            <state line="29" column="0" selection-start="2201" selection-end="2201" vertical-scroll-proportion="0.96119404">
               <folding />
             </state>
           </provider>
@@ -119,10 +114,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="visual.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="visual.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/visual.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="9" selection-start="3731" selection-end="3731" vertical-scroll-proportion="0.5686275">
+            <state line="124" column="7" selection-start="3731" selection-end="3731" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -204,8 +199,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/sound.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/sound.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/music.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/visual.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
       </list>
     </option>
   </component>
@@ -753,7 +748,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-1" width="1284" height="747" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -766,7 +761,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25163934" sideWeight="0.6712329" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495935" sideWeight="0.22222222" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13333334" sideWeight="0.6973244" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13333334" sideWeight="0.6973244" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.65824914" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2495935" sideWeight="0.6973244" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -908,16 +903,16 @@
         <state line="8" column="0" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/visual.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="29" selection-start="786" selection-end="786" vertical-scroll-proportion="-14.636364">
+        <state line="124" column="7" selection-start="3731" selection-end="3731" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/visual.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="9" selection-start="3731" selection-end="3731" vertical-scroll-proportion="0.5686275">
+        <state line="29" column="0" selection-start="2201" selection-end="2201" vertical-scroll-proportion="0.96119404">
           <folding />
         </state>
       </provider>
